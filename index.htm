@@ -12,6 +12,7 @@
             var aoi = {lat: 54.042926, lng: -2.804005};
             var map = new google.maps.Map(document.getElementById("mapDiv"), {center: aoi, zoom: 15});
             var marker = new google.maps.Marker({map: map, position: aoi});
+            map.date.loadGeoJson('aoi.geojson');
         </script>
     </body>
 </html>
