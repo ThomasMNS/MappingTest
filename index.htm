@@ -13,6 +13,7 @@
             var map = new google.maps.Map(document.getElementById("mapDiv"), {center: aoi, zoom: 15});
             var marker = new google.maps.Marker({map: map, position: aoi});
             map.data.loadGeoJson('aoi.geojson');
+            map.data.setStyle({fillColor: 'green'});
         </script>
     </body>
 </html>
