@@ -6,6 +6,7 @@
     </head>
     <body>
         <h1>Natural Capital GIS</h1>
+        <p id="Info"></p>
         <div id="mapDiv"></div>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvml8IlaXwXxs4XiI3IFz5XsiYqpowq9Y"></script>
         <script>
@@ -14,6 +15,9 @@
             var marker = new google.maps.Marker({map: map, position: aoi});
             map.data.loadGeoJson('aoi.geojson');
             map.data.setStyle({fillColor: 'green'});
+            map.data.addListener('mouseover', function(event) {
+                document.getElementById("Info").textContent = event.feature.getProperty('name');
+            });
         </script>
     </body>
 </html>
