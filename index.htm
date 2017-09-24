@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Natural Capital GIS</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Natural Capital GIS</h1>
+        <div id="mapDiv"></div>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvml8IlaXwXxs4XiI3IFz5XsiYqpowq9Y"></script>
+        <script>
+            var aoi = {lat: 54.042926, lng: -2.804005};
+            var map = new google.maps.Map(document.getElementById("mapDiv"), {center: aoi, zoom: 15});
+            var marker = new google.maps.Marker({map: map, position: aoi});
+        </script>
+    </body>
+</html>
